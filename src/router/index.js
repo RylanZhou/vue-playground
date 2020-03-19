@@ -17,6 +17,23 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import('@/views/TodoApp/index')
+  },
+  {
+    path: '/canvas',
+    name: 'Canvas',
+    component: () => import('@/views/Canvas/index'),
+    children: [
+      {
+        path: '/canvas/test',
+        name: 'CanvasTest',
+        component: () => import('@/views/Canvas/TestField')
+      }
+    ]
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('@/views/404')
   }
 ]
 

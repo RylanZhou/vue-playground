@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">
+      <router-link to="/" exact>
         Home
-      </router-link>
-      |
+      </router-link>|
       <router-link to="/todo-list">
         Todo List
+      </router-link>|
+      <router-link to="/canvas">
+        Canvas
       </router-link>
     </div>
     <div id="pages">
@@ -35,7 +37,7 @@ body {
       font-weight: bold;
       color: #2c3e50;
 
-      &.router-link-exact-active {
+      &.router-link-exact-active, &.router-link-active {
         color: #409efe;
       }
     }
