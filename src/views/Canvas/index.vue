@@ -61,6 +61,7 @@ export default {
   .main-container {
     flex-grow: 1;
     padding: 16px;
+    overflow: hidden;
 
     canvas {
       border: 1px solid #ccc;
