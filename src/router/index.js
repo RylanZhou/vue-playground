@@ -31,6 +31,11 @@ const routes = [
     ]
   },
   {
+    path: '/2048',
+    name: '2048',
+    component: () => import('@/views/2048/index')
+  },
+  {
     path: '*',
     name: '404',
     component: () => import('@/views/404')

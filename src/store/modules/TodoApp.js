@@ -22,7 +22,6 @@ export default {
         },
         ...state.data
       ]
-      console.log(state.data)
     },
     [TYPES.DELETE](state, id) {
       state.data = [...state.data.filter((each) => each.id !== id)]

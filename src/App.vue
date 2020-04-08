@@ -9,10 +9,15 @@
       </router-link>|
       <router-link to="/canvas">
         Canvas
+      </router-link>|
+      <router-link to="/2048">
+        2048
       </router-link>
     </div>
     <div id="pages">
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -47,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: calc(100vh - 120px);
   }
 }
 </style>
